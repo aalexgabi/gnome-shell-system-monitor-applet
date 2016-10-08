@@ -33,8 +33,7 @@ Then:
     cd ~/git_projects
     git clone git://github.com/paradoxxxzero/gnome-shell-system-monitor-applet.git
     mkdir -p ~/.local/share/gnome-shell/extensions
-    cd ~/.local/share/gnome-shell/extensions
-    ln -s ~/git_projects/gnome-shell-system-monitor-applet/system-monitor@paradoxxx.zero.gmail.com
+    wget -O- https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet/archive/master.tar.gz | tar --strip-components=1 -C ~/.local/share/gnome-shell/extensions -xzv gnome-shell-system-monitor-applet-master/system-monitor@paradoxxx.zero.gmail.com
     gnome-shell-extension-tool --enable-extension=system-monitor@paradoxxx.zero.gmail.com
 
 And restart gnome-shell (Alt + F2 -> r) or reboot.
